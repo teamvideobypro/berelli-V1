@@ -88,7 +88,7 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
                 <span className="w-2 h-2 rounded-full bg-brand-orange" />
                 <span>EXPEDITED SURGICAL QUOTE</span>
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
+              <h3 className="text-xl sm:text-2xl font-semibold text-white tracking-tight">
                 {selectedProduct ? `Quote for ${selectedProduct}` : "Direct OR Hardware Tender"}
               </h3>
               <p className="text-xs text-neutral-400 mt-1 mb-5">
@@ -190,7 +190,7 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
               <div className="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 mx-auto flex items-center justify-center">
                 <CheckCircle2 className="w-7 h-7" />
               </div>
-              <h4 className="text-xl font-bold text-white">Proposal Dispatched</h4>
+              <h4 className="text-xl font-semibold text-white">Proposal Dispatched</h4>
               <p className="text-xs text-neutral-300 leading-relaxed max-w-sm mx-auto">
                 Official quotation and dealer agreement documents for{" "}
                 <strong className="text-white">{formData.hospital}</strong> have been
@@ -265,7 +265,7 @@ export const DealerLoginModal: React.FC<DealerLoginModalProps> = ({ isOpen, onCl
                 <Lock className="w-3.5 h-3.5" />
                 <span>SECURE B2B EXTRANET</span>
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
+              <h3 className="text-xl sm:text-2xl font-semibold text-white tracking-tight">
                 Authorized Dealer Portal
               </h3>
               <p className="text-xs text-neutral-400 mt-1 mb-6">
@@ -323,7 +323,7 @@ export const DealerLoginModal: React.FC<DealerLoginModalProps> = ({ isOpen, onCl
               <div className="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 mx-auto flex items-center justify-center">
                 <CheckCircle2 className="w-7 h-7" />
               </div>
-              <h4 className="text-xl font-bold text-white">Dealer Workspace Connected</h4>
+              <h4 className="text-xl font-semibold text-white">Dealer Workspace Connected</h4>
               <div className="p-3 bg-[#181818] rounded-lg border border-neutral-800 text-left text-xs font-mono space-y-1.5">
                 <div className="flex justify-between">
                   <span className="text-neutral-400">ACCOUNT:</span>
@@ -394,7 +394,7 @@ export const EngineeringTolerancesModal: React.FC<EngineeringTolerancesModalProp
             <Cpu className="w-3.5 h-3.5" />
             <span>BIOMECHANICAL ENGINEERING DATA</span>
           </div>
-          <h3 className="text-2xl font-bold text-white tracking-tight">
+          <h3 className="text-2xl font-semibold text-white tracking-tight">
             ISO 13485:2016 Micron Locking Tolerances
           </h3>
           <p className="text-xs text-neutral-400 mt-1 mb-6">

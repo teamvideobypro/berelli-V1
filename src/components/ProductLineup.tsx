@@ -63,7 +63,7 @@ export const ProductLineup: React.FC<ProductLineupProps> = ({ onSelectProduct })
             <div className="inline-block text-xs font-mono font-bold text-brand-orange uppercase tracking-wider mb-2">
               [ 03 / POSITIONER LINEUP ]
             </div>
-            <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-950">
+            <h2 className="text-3xl sm:text-5xl font-semibold tracking-tight text-slate-950">
               Standard-Setting Positioning Hardware.
             </h2>
           </div>
@@ -117,7 +117,7 @@ export const ProductLineup: React.FC<ProductLineupProps> = ({ onSelectProduct })
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl sm:text-2xl font-extrabold text-slate-950 tracking-tight leading-snug group-hover:text-brand-orange transition-colors">
+                <h3 className="text-xl sm:text-2xl font-semibold text-slate-950 tracking-tight leading-snug group-hover:text-brand-orange transition-colors">
                   {prod.title}
                 </h3>
 
@@ -136,7 +136,7 @@ export const ProductLineup: React.FC<ProductLineupProps> = ({ onSelectProduct })
                   <div className="text-[10px] font-mono text-amber-900 uppercase font-bold mt-0.5">
                     price starts from
                   </div>
-                  <div className="text-xl sm:text-2xl font-extrabold font-mono text-slate-950 tracking-tight mt-0.5">
+                  <div className="text-xl sm:text-2xl font-semibold font-mono text-slate-950 tracking-tight mt-0.5">
                     from {prod.wholesalePrice}
                   </div>
 

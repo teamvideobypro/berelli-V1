@@ -47,7 +47,7 @@ export const ContactLeadSection: React.FC<ContactLeadSectionProps> = ({
             <div className="text-xs font-mono font-bold tracking-wider text-white/90 uppercase mb-3">
               [ DIRECT SURGICAL SUPPLY INQUIRY ]
             </div>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.08]">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-white leading-[1.08]">
               Let&apos;s build what&apos;s next in <br />
               surgical positioning.
             </h2>
@@ -96,7 +96,7 @@ export const ContactLeadSection: React.FC<ContactLeadSectionProps> = ({
           {/* Card Title Row */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-6 border-b border-slate-100">
             <div>
-              <h3 className="text-xl sm:text-2xl font-extrabold tracking-tight text-slate-950">
+              <h3 className="text-xl sm:text-2xl font-semibold tracking-tight text-slate-950">
                 Request Proposal / Dealer Pricing
               </h3>
               <div className="text-[10px] font-mono font-semibold text-slate-400 uppercase tracking-wider mt-1">

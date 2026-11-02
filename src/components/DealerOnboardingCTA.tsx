@@ -36,7 +36,7 @@ export const DealerOnboardingCTA: React.FC = () => {
           </div>
 
           {/* Title & Description */}
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-white mb-4">
             Become an Authorized Bereli Dealer
           </h2>
           <p className="text-sm sm:text-base text-neutral-400 max-w-2xl mx-auto leading-relaxed font-normal mb-8">

@@ -104,7 +104,7 @@ export const StatsBar: React.FC = () => {
                   </div>
 
                   <div className="mt-2">
-                    <div className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white font-sans flex items-baseline gap-2">
+                    <div className="text-2xl sm:text-3xl font-semibold tracking-tight text-white font-sans flex items-baseline gap-2">
                       <span>{stat.headline}</span>
                       <span className="text-brand-orange">{stat.subline}</span>
                     </div>

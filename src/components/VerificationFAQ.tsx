@@ -51,7 +51,7 @@ export const VerificationFAQ: React.FC = () => {
           <div className="inline-flex items-center gap-2 text-xs font-mono font-bold text-brand-orange uppercase tracking-wider mb-3">
             <span>[ 05 / VERIFICATION &amp; FAQS ]</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-950 mb-4">
+          <h2 className="text-3xl sm:text-5xl font-semibold tracking-tight text-slate-950 mb-4">
             Frequently Addressed Specifications.
           </h2>
           <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
@@ -82,7 +82,7 @@ export const VerificationFAQ: React.FC = () => {
                     className="w-full p-5 text-left flex items-start justify-between gap-4 focus:outline-none"
                     aria-expanded={isOpen}
                   >
-                    <span className="text-sm sm:text-base font-bold text-slate-900 tracking-tight">
+                    <span className="text-sm sm:text-base font-semibold text-slate-900 tracking-tight">
                       {faq.q}
                     </span>
                     <span className="mt-0.5 p-1 rounded bg-orange-50 text-brand-orange font-mono font-bold text-sm shrink-0 border border-orange-200">
@@ -129,7 +129,7 @@ export const VerificationFAQ: React.FC = () => {
                     className="w-full p-5 text-left flex items-start justify-between gap-4 focus:outline-none"
                     aria-expanded={isOpen}
                   >
-                    <span className="text-sm sm:text-base font-bold text-slate-900 tracking-tight">
+                    <span className="text-sm sm:text-base font-semibold text-slate-900 tracking-tight">
                       {faq.q}
                     </span>
                     <span className="mt-0.5 p-1 rounded bg-orange-50 text-brand-orange font-mono font-bold text-sm shrink-0 border border-orange-200">

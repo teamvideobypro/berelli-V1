@@ -33,7 +33,7 @@ export const ClinicalBiomechanics: React.FC<ClinicalBiomechanicsProps> = ({
             </div>
 
             {/* Heading */}
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-950 leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-slate-950 leading-tight">
               Engineered for <br />
               Patient Safety &amp; <br />
               <span className="text-brand-orange">Zero-Drift Locking.</span>

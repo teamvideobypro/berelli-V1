@@ -16,7 +16,7 @@ export const DynamicSimulation: React.FC = () => {
           <div className="inline-block text-xs font-mono font-bold text-cyan-400 uppercase tracking-wider mb-2">
             [ 02 / DYNAMIC SIMULATION ]
           </div>
-          <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-white">
+          <h2 className="text-2xl sm:text-4xl font-semibold tracking-tight text-white">
             360° Articulation &amp; Table Rail Clamping in Motion
           </h2>
         </div>

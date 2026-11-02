@@ -70,7 +70,7 @@ export const SystemArchitecture: React.FC = () => {
           <div className="inline-flex items-center gap-2 text-xs font-mono font-bold text-brand-orange uppercase tracking-wider mb-3">
             <span>[ 04 / SYSTEM ARCHITECTURE ]</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-950 mb-4">
+          <h2 className="text-3xl sm:text-5xl font-semibold tracking-tight text-slate-950 mb-4">
             Clinical Excellence Contrasted with B2B Efficiency.
           </h2>
           <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
@@ -118,7 +118,7 @@ export const SystemArchitecture: React.FC = () => {
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl sm:text-2xl font-extrabold text-slate-950 tracking-tight leading-snug mb-3 group-hover:text-brand-orange transition-colors">
+                  <h3 className="text-xl sm:text-2xl font-semibold text-slate-950 tracking-tight leading-snug mb-3 group-hover:text-brand-orange transition-colors">
                     {card.title}
                   </h3>
 

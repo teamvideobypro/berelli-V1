@@ -21,7 +21,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenQuoteModal }) =>
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-7"
           >
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.08]">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-white leading-[1.08]">
               Precision Leg Holder <br />
               Positioners for <br />
               <span className="text-brand-orange inline-block border-b-2 sm:border-b-4 border-brand-orange pb-1">
