@@ -61,7 +61,7 @@ export const ProductLineup: React.FC<ProductLineupProps> = ({ onSelectProduct })
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12 pb-6 border-b border-slate-200">
           <div>
             <div className="inline-block text-xs font-mono font-bold text-brand-orange uppercase tracking-wider mb-2">
-              [ 04 / PRODUCT LINEUP ]
+              [ 03 / POSITIONER LINEUP ]
             </div>
             <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-950">
               Standard-Setting Positioning Hardware.
