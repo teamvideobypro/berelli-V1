@@ -11,7 +11,6 @@ import {
   Activity,
   Layers,
   Sliders,
-  Check,
 } from "lucide-react";
 
 export const DynamicSimulation: React.FC = () => {
@@ -32,22 +31,22 @@ export const DynamicSimulation: React.FC = () => {
   return (
     <section
       id="specifications"
-      className="relative py-20 sm:py-28 bg-[#0a0a0a] border-b border-[#262626] overflow-hidden"
+      className="relative py-20 sm:py-28 bg-white text-slate-900 border-b border-slate-200 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 pb-6 border-b border-neutral-800">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 pb-6 border-b border-slate-200">
           <div>
-            <div className="inline-flex items-center gap-2 text-xs font-mono text-brand-orange uppercase tracking-wider mb-2">
+            <div className="inline-flex items-center gap-2 text-xs font-mono font-bold text-brand-orange uppercase tracking-wider mb-2">
               <span className="w-2 h-2 rounded-full bg-brand-orange animate-ping" />
               <span>[ 02 / DYNAMIC SIMULATION ]</span>
             </div>
-            <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-white">
+            <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-slate-950">
               360° Articulation &amp; Table Rail Clamping in Motion
             </h2>
           </div>
-          <div className="flex items-center gap-2 text-xs font-mono text-neutral-400">
-            <span className="inline-block w-2 h-2 rounded-full bg-emerald-400" />
+          <div className="flex items-center gap-2 text-xs font-mono text-slate-500 font-semibold">
+            <span className="inline-block w-2 h-2 rounded-full bg-emerald-500" />
             <span>REAL-TIME KINEMATICS ENGINE</span>
           </div>
         </div>
@@ -56,12 +55,12 @@ export const DynamicSimulation: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
+          viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="rounded-2xl bg-[#0f0f0f] border border-[#2b2b2b] p-4 sm:p-7 shadow-2xl overflow-hidden"
+          className="rounded-2xl bg-slate-900 text-white p-4 sm:p-7 shadow-2xl overflow-hidden border border-slate-800"
         >
           {/* Top Console Bar */}
-          <div className="flex flex-wrap items-center justify-between gap-3 pb-4 mb-4 border-b border-neutral-800 text-xs font-mono">
+          <div className="flex flex-wrap items-center justify-between gap-3 pb-4 mb-4 border-b border-slate-800 text-xs font-mono">
             <div className="flex items-center gap-3">
               <div className="flex gap-1.5">
                 <span className="w-3 h-3 rounded-full bg-neutral-700" />
@@ -104,7 +103,7 @@ export const DynamicSimulation: React.FC = () => {
           </div>
 
           {/* Central 3D Simulation Viewport with Interactive HUD Overlay */}
-          <div className="relative aspect-[16/9] w-full rounded-xl overflow-hidden bg-black border border-neutral-800">
+          <div className="relative aspect-[16/9] w-full rounded-xl overflow-hidden bg-black border border-slate-800">
             <Image
               src="/images/simulation-3d.png"
               alt="3D Operating Room Articulation Simulation"
@@ -143,8 +142,8 @@ export const DynamicSimulation: React.FC = () => {
             </div>
           </div>
 
-          {/* Interactive Simulation Controls & Oscilloscope Timeline */}
-          <div className="mt-5 grid grid-cols-1 md:grid-cols-3 gap-4 pt-4 border-t border-neutral-800/80">
+          {/* Interactive Simulation Controls */}
+          <div className="mt-5 grid grid-cols-1 md:grid-cols-3 gap-4 pt-4 border-t border-slate-800">
             {/* Control 1: Articulation Rotation Slider */}
             <div className="bg-[#141414] border border-neutral-800 p-3.5 rounded-lg flex flex-col justify-between">
               <div className="flex items-center justify-between text-xs font-mono text-neutral-400 mb-2">

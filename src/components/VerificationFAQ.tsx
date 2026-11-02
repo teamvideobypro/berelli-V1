@@ -2,12 +2,11 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Plus, Minus, FileCheck, HelpCircle } from "lucide-react";
+import { Plus, Minus, FileCheck } from "lucide-react";
 
 export const VerificationFAQ: React.FC = () => {
-  // Store open state for each category
   const [openItems, setOpenItems] = useState<{ [key: string]: boolean }>({
-    "dealer-0": true, // First item open by default like in Framer
+    "dealer-0": true,
     "clinical-0": false,
   });
 
@@ -45,19 +44,19 @@ export const VerificationFAQ: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 sm:py-28 bg-[#0a0a0a] border-b border-[#262626]">
+    <section className="py-20 sm:py-28 bg-[#f8fafc] text-slate-900 border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 text-xs font-mono text-brand-orange uppercase tracking-wider mb-3">
-            <span className="w-2 h-2 rounded-full bg-brand-orange" />
+          <div className="inline-flex items-center gap-2 text-xs font-mono font-bold text-brand-orange uppercase tracking-wider mb-3">
             <span>[ 05 / VERIFICATION &amp; FAQS ]</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-white mb-4">
+          <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-950 mb-4">
             Frequently Addressed Specifications.
           </h2>
-          <p className="text-sm sm:text-base text-neutral-300 leading-relaxed font-normal">
-            Everything your surgery center materials manager, biomedical team, and hospital value analysis committee needs to review.
+          <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+            Everything your surgery center materials manager, biomedical team,
+            and hospital value analysis committee needs to review.
           </p>
         </div>
 
@@ -65,9 +64,9 @@ export const VerificationFAQ: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           {/* Column A: Dealer & Procurement */}
           <div className="space-y-4">
-            <div className="flex items-center justify-between pb-3 border-b border-neutral-800 text-xs font-mono text-neutral-400">
-              <span className="text-brand-orange font-semibold">SECTION A:</span>
-              <span>DEALER &amp; PROCUREMENT TERMS</span>
+            <div className="flex items-center justify-between pb-3 border-b border-slate-200 text-xs font-mono text-slate-500">
+              <span className="text-brand-orange font-bold">SECTION A:</span>
+              <span className="font-semibold">DEALER &amp; PROCUREMENT TERMS</span>
             </div>
 
             {dealerFaqs.map((faq, index) => {
@@ -76,17 +75,17 @@ export const VerificationFAQ: React.FC = () => {
               return (
                 <div
                   key={faq.q}
-                  className="rounded-xl bg-[#111111] border border-[#262626] overflow-hidden transition-colors hover:border-neutral-700"
+                  className="rounded-xl bg-white border border-slate-200 overflow-hidden shadow-sm transition-colors hover:border-slate-300"
                 >
                   <button
                     onClick={() => toggleItem(key)}
                     className="w-full p-5 text-left flex items-start justify-between gap-4 focus:outline-none"
                     aria-expanded={isOpen}
                   >
-                    <span className="text-sm sm:text-base font-bold text-white tracking-tight">
+                    <span className="text-sm sm:text-base font-bold text-slate-900 tracking-tight">
                       {faq.q}
                     </span>
-                    <span className="mt-0.5 p-1 rounded bg-[#1c1c1c] text-brand-orange font-mono font-bold text-sm shrink-0">
+                    <span className="mt-0.5 p-1 rounded bg-orange-50 text-brand-orange font-mono font-bold text-sm shrink-0 border border-orange-200">
                       {isOpen ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
                     </span>
                   </button>
@@ -99,7 +98,7 @@ export const VerificationFAQ: React.FC = () => {
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
                       >
-                        <div className="px-5 pb-5 pt-1 text-xs sm:text-sm text-neutral-300 leading-relaxed font-normal border-t border-neutral-800/80">
+                        <div className="px-5 pb-5 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed font-normal border-t border-slate-100">
                           {faq.a}
                         </div>
                       </motion.div>
@@ -112,9 +111,9 @@ export const VerificationFAQ: React.FC = () => {
 
           {/* Column B: Clinical Compliance & Table Fit */}
           <div className="space-y-4">
-            <div className="flex items-center justify-between pb-3 border-b border-neutral-800 text-xs font-mono text-neutral-400">
-              <span className="text-cyan-400 font-semibold">SECTION B:</span>
-              <span>CLINICAL COMPLIANCE &amp; TABLE FIT</span>
+            <div className="flex items-center justify-between pb-3 border-b border-slate-200 text-xs font-mono text-slate-500">
+              <span className="text-cyan-700 font-bold">SECTION B:</span>
+              <span className="font-semibold">CLINICAL COMPLIANCE &amp; TABLE FIT</span>
             </div>
 
             {clinicalFaqs.map((faq, index) => {
@@ -123,17 +122,17 @@ export const VerificationFAQ: React.FC = () => {
               return (
                 <div
                   key={faq.q}
-                  className="rounded-xl bg-[#111111] border border-[#262626] overflow-hidden transition-colors hover:border-neutral-700"
+                  className="rounded-xl bg-white border border-slate-200 overflow-hidden shadow-sm transition-colors hover:border-slate-300"
                 >
                   <button
                     onClick={() => toggleItem(key)}
                     className="w-full p-5 text-left flex items-start justify-between gap-4 focus:outline-none"
                     aria-expanded={isOpen}
                   >
-                    <span className="text-sm sm:text-base font-bold text-white tracking-tight">
+                    <span className="text-sm sm:text-base font-bold text-slate-900 tracking-tight">
                       {faq.q}
                     </span>
-                    <span className="mt-0.5 p-1 rounded bg-[#1c1c1c] text-brand-orange font-mono font-bold text-sm shrink-0">
+                    <span className="mt-0.5 p-1 rounded bg-orange-50 text-brand-orange font-mono font-bold text-sm shrink-0 border border-orange-200">
                       {isOpen ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
                     </span>
                   </button>
@@ -146,7 +145,7 @@ export const VerificationFAQ: React.FC = () => {
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
                       >
-                        <div className="px-5 pb-5 pt-1 text-xs sm:text-sm text-neutral-300 leading-relaxed font-normal border-t border-neutral-800/80">
+                        <div className="px-5 pb-5 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed font-normal border-t border-slate-100">
                           {faq.a}
                         </div>
                       </motion.div>
@@ -157,21 +156,21 @@ export const VerificationFAQ: React.FC = () => {
             })}
 
             {/* Regulatory Kit Download Banner */}
-            <div className="mt-4 p-5 rounded-xl bg-[#131313] border border-neutral-800 flex items-center justify-between">
+            <div className="mt-4 p-5 rounded-xl bg-white border border-slate-200 shadow-sm flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <FileCheck className="w-5 h-5 text-brand-orange" />
+                <FileCheck className="w-5 h-5 text-brand-orange shrink-0" />
                 <div>
-                  <div className="text-xs font-bold text-white">
+                  <div className="text-xs font-bold text-slate-900">
                     Need Hospital VAC Approval Package?
                   </div>
-                  <div className="text-[11px] text-neutral-400">
+                  <div className="text-[11px] text-slate-500">
                     Includes 510(k), cleaning IFU &amp; biocompatibility records.
                   </div>
                 </div>
               </div>
               <a
                 href="#contact"
-                className="px-3.5 py-1.5 rounded text-xs font-mono font-semibold bg-neutral-800 hover:bg-neutral-700 text-white transition-colors"
+                className="px-3.5 py-1.5 rounded text-xs font-mono font-bold bg-slate-900 hover:bg-slate-800 text-white transition-colors shadow-sm"
               >
                 REQUEST DOSSIER
               </a>

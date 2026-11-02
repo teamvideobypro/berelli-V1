@@ -39,8 +39,8 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen bg-medical-dark text-white flex flex-col selection:bg-brand-orange selection:text-white">
-      {/* Navigation Bar */}
+    <main className="min-h-screen w-full overflow-x-clip selection:bg-brand-orange selection:text-white">
+      {/* Navigation Bar (Dark Utilitarian Control Bar) */}
       <Navbar
         onOpenQuoteModal={() => {
           setSelectedProduct({ name: "", sku: "", price: "" });
@@ -49,7 +49,7 @@ export default function Home() {
         onOpenLoginModal={() => setLoginModalOpen(true)}
       />
 
-      {/* Hero Section */}
+      {/* 1. Hero Section (Dark Theme matching Frame 5 (2).jpg) */}
       <HeroSection
         onOpenQuoteModal={() => {
           setSelectedProduct({ name: "", sku: "", price: "" });
@@ -57,36 +57,36 @@ export default function Home() {
         }}
       />
 
-      {/* Elevated Stats Bar */}
+      {/* Elevated Stats Bar Deck (Overlapping Dark-to-Light Transition) */}
       <StatsBar />
 
-      {/* Clinical Biomechanics Section */}
+      {/* 2. Clinical Biomechanics (Light Theme matching AboutSection Variant 2) */}
       <ClinicalBiomechanics
         onOpenTolerancesModal={() => setTolerancesModalOpen(true)}
       />
 
-      {/* Dynamic 360 Articulation Simulation */}
+      {/* Dynamic 360 Articulation Simulation Console */}
       <DynamicSimulation />
 
-      {/* Core Product Lineup Platforms */}
+      {/* 3. Product Lineup (Light Theme Variant) */}
       <ProductLineup onSelectProduct={handleSelectProduct} />
 
-      {/* 4-Quadrant System Architecture */}
+      {/* 3. System Architecture (Light Theme Variant) */}
       <SystemArchitecture />
 
       {/* Mid-Page Dealer Onboarding CTA */}
       <DealerOnboardingCTA />
 
-      {/* Verification & FAQs 2-Column Board */}
+      {/* 3. Verification & FAQs 2-Column Board (Light Theme Variant) */}
       <VerificationFAQ />
 
-      {/* Full-Width Contact Lead & RFP Section */}
+      {/* 4. Contact / Proposal Section (Full-Width Orange Theme matching ContactLeadSection Variant 2) */}
       <ContactLeadSection
         initialProduct={selectedProduct.name}
         initialSku={selectedProduct.sku}
       />
 
-      {/* Main Comprehensive Footer */}
+      {/* Comprehensive Medical Footer */}
       <Footer />
 
       {/* Interactive Modals */}

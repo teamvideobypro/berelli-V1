@@ -56,21 +56,21 @@ export const SystemArchitecture: React.FC = () => {
   ];
 
   return (
-    <section id="resources" className="py-20 sm:py-28 bg-[#0a0a0a] border-b border-[#262626]">
+    <section id="resources" className="py-20 sm:py-28 bg-[#f8fafc] text-slate-900 border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 text-xs font-mono text-brand-orange uppercase tracking-wider mb-3">
-            <span className="w-2 h-2 rounded-full bg-brand-orange" />
+          <div className="inline-flex items-center gap-2 text-xs font-mono font-bold text-brand-orange uppercase tracking-wider mb-3">
             <span>[ 03 / SYSTEM ARCHITECTURE ]</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-white mb-4">
+          <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-950 mb-4">
             Clinical Excellence Contrasted with B2B Efficiency.
           </h2>
-          <p className="text-sm sm:text-base text-neutral-300 leading-relaxed font-normal">
-            Engineered to exceed rigid surgical OR standards while delivering frictionless supply chains and margins for distribution partners.
+          <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+            Engineered to exceed rigid surgical OR standards while delivering
+            frictionless supply chains and margins for distribution partners.
           </p>
-          <div className="mt-5 inline-block px-3 py-1 rounded-full bg-[#141414] border border-neutral-800 text-[11px] font-mono text-neutral-400">
+          <div className="mt-5 inline-block px-3 py-1 rounded-full bg-white border border-slate-200 text-[11px] font-mono text-slate-600 shadow-sm">
             SYSTEM MATRIX: COMPARATIVE ARCHITECTURE
           </div>
         </div>
@@ -83,42 +83,42 @@ export const SystemArchitecture: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="rounded-2xl bg-[#0f0f0f] border border-[#262626] p-6 sm:p-8 flex flex-col justify-between shadow-xl"
+            className="rounded-2xl bg-white border border-slate-200 p-6 sm:p-8 flex flex-col justify-between shadow-xl"
           >
             <div>
               {/* Header */}
-              <div className="flex items-center justify-between pb-4 mb-6 border-b border-neutral-800">
+              <div className="flex items-center justify-between pb-4 mb-6 border-b border-slate-100">
                 <div className="flex items-center gap-2.5">
-                  <span className="w-2.5 h-2.5 rounded-full bg-cyan-400" />
-                  <span className="text-xs font-mono font-bold tracking-wider text-white">
+                  <span className="w-2.5 h-2.5 rounded-full bg-cyan-600" />
+                  <span className="text-xs font-mono font-bold tracking-wider text-slate-900">
                     CLINICAL OR PERFORMANCE
                   </span>
                 </div>
-                <span className="text-[11px] font-mono text-neutral-400">
+                <span className="text-[11px] font-mono text-slate-500">
                   [ SURGICAL SUITE ]
                 </span>
               </div>
 
               {/* Items List */}
-              <div className="space-y-6">
-                {clinicalItems.map((item, idx) => {
+              <div className="space-y-4">
+                {clinicalItems.map((item) => {
                   const Icon = item.icon;
                   return (
                     <div
                       key={item.title}
-                      className="p-5 rounded-xl bg-[#141414] border border-neutral-800/80 hover:border-cyan-500/40 transition-colors group"
+                      className="p-5 rounded-xl bg-slate-50/80 border border-slate-200/80 hover:border-cyan-400 transition-colors group"
                     >
-                      <div className="flex items-center justify-between text-[10px] font-mono text-cyan-400 mb-2">
+                      <div className="flex items-center justify-between text-[10px] font-mono text-cyan-700 font-semibold mb-2">
                         <span className="flex items-center gap-1.5">
                           <Icon className="w-3.5 h-3.5" />
                           <span>{item.badge}</span>
                         </span>
-                        <span className="text-neutral-400">CLASS II CRITERIA</span>
+                        <span className="text-slate-400">CLASS II CRITERIA</span>
                       </div>
-                      <h4 className="text-base font-bold text-white tracking-tight mb-2 group-hover:text-cyan-300 transition-colors">
+                      <h4 className="text-base font-bold text-slate-900 tracking-tight mb-2 group-hover:text-cyan-800 transition-colors">
                         {item.title}
                       </h4>
-                      <p className="text-xs text-neutral-400 leading-relaxed font-normal">
+                      <p className="text-xs text-slate-600 leading-relaxed font-normal">
                         {item.desc}
                       </p>
                     </div>
@@ -127,9 +127,9 @@ export const SystemArchitecture: React.FC = () => {
               </div>
             </div>
 
-            <div className="mt-6 pt-4 border-t border-neutral-800/80 flex items-center justify-between text-[11px] font-mono text-neutral-400">
+            <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono text-slate-500">
               <span>VALIDATION: ASTM &amp; ISO 10993 COMPLIANT</span>
-              <CheckCircle2 className="w-4 h-4 text-cyan-400" />
+              <CheckCircle2 className="w-4 h-4 text-cyan-600" />
             </div>
           </motion.div>
 
@@ -139,42 +139,42 @@ export const SystemArchitecture: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="rounded-2xl bg-[#0f0f0f] border border-[#262626] p-6 sm:p-8 flex flex-col justify-between shadow-xl"
+            className="rounded-2xl bg-white border border-slate-200 p-6 sm:p-8 flex flex-col justify-between shadow-xl"
           >
             <div>
               {/* Header */}
-              <div className="flex items-center justify-between pb-4 mb-6 border-b border-neutral-800">
+              <div className="flex items-center justify-between pb-4 mb-6 border-b border-slate-100">
                 <div className="flex items-center gap-2.5">
                   <span className="w-2.5 h-2.5 rounded-full bg-brand-orange" />
-                  <span className="text-xs font-mono font-bold tracking-wider text-white">
+                  <span className="text-xs font-mono font-bold tracking-wider text-slate-900">
                     DEALER &amp; GPO COMMERCIAL TERMS
                   </span>
                 </div>
-                <span className="text-[11px] font-mono text-neutral-400">
+                <span className="text-[11px] font-mono text-slate-500">
                   [ SUPPLY CHAIN ]
                 </span>
               </div>
 
               {/* Items List */}
-              <div className="space-y-6">
-                {commercialItems.map((item, idx) => {
+              <div className="space-y-4">
+                {commercialItems.map((item) => {
                   const Icon = item.icon;
                   return (
                     <div
                       key={item.title}
-                      className="p-5 rounded-xl bg-[#141414] border border-neutral-800/80 hover:border-brand-orange/40 transition-colors group"
+                      className="p-5 rounded-xl bg-slate-50/80 border border-slate-200/80 hover:border-brand-orange transition-colors group"
                     >
-                      <div className="flex items-center justify-between text-[10px] font-mono text-brand-orange mb-2">
+                      <div className="flex items-center justify-between text-[10px] font-mono text-brand-orange font-semibold mb-2">
                         <span className="flex items-center gap-1.5">
                           <Icon className="w-3.5 h-3.5" />
                           <span>{item.badge}</span>
                         </span>
-                        <span className="text-neutral-400">B2B CONTRACT</span>
+                        <span className="text-slate-400">B2B CONTRACT</span>
                       </div>
-                      <h4 className="text-base font-bold text-white tracking-tight mb-2 group-hover:text-brand-orange transition-colors">
+                      <h4 className="text-base font-bold text-slate-900 tracking-tight mb-2 group-hover:text-brand-orange transition-colors">
                         {item.title}
                       </h4>
-                      <p className="text-xs text-neutral-400 leading-relaxed font-normal">
+                      <p className="text-xs text-slate-600 leading-relaxed font-normal">
                         {item.desc}
                       </p>
                     </div>
@@ -183,7 +183,7 @@ export const SystemArchitecture: React.FC = () => {
               </div>
             </div>
 
-            <div className="mt-6 pt-4 border-t border-neutral-800/80 flex items-center justify-between text-[11px] font-mono text-neutral-400">
+            <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono text-slate-500">
               <span>TERRITORY DISPATCH: UNDER 24H</span>
               <CheckCircle2 className="w-4 h-4 text-brand-orange" />
             </div>
