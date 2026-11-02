@@ -3,7 +3,6 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Check, ArrowRight } from "lucide-react";
 
 interface ProductLineupProps {
   onSelectProduct: (productName: string, sku: string, price: string) => void;
@@ -22,11 +21,6 @@ export const ProductLineup: React.FC<ProductLineupProps> = ({ onSelectProduct })
       title: "OmniGrip™ Elite Lithotomy Leg Positioner",
       description:
         "Heavy-duty bariatric lift assist positioner designed for high-BMI pelvic, colorectal, and gynecological interventions.",
-      highlights: [
-        "Gas-Spring 350N Counterbalance",
-        "Anatomical Pressure-Dispersing Boot",
-        "Zero-Slip Micron Locking Joint",
-      ],
       msrp: "$4,850",
       wholesalePrice: "$3,220",
     },
@@ -41,11 +35,6 @@ export const ProductLineup: React.FC<ProductLineupProps> = ({ onSelectProduct })
       title: "AeroFlex™ Arthroscopic Knee & Leg Holder",
       description:
         "Multi-axis orthopedic positioning bracket facilitating hyper-flexion, extension, and valgus stress during ACL repairs.",
-      highlights: [
-        "Full Hyper-Flexion OR Range",
-        "High-Rigidity 316L Stainless Bar",
-        "Single-Knob Sterilizable Cam",
-      ],
       msrp: "$3,290",
       wholesalePrice: "$2,980",
     },
@@ -60,46 +49,19 @@ export const ProductLineup: React.FC<ProductLineupProps> = ({ onSelectProduct })
       title: "Universal Side-Rail Clamp & Socket Hub",
       description:
         'Heavy-duty micro-locking stainless connector adapting 5/8" to 3/4" posts securely to US, UK, and Euro table side rails.',
-      highlights: [
-        "Compatible with US, UK & EU Rails",
-        "Anti-Rotation Dual Tooth Socket",
-        "Fast One-Hand Cam Latch",
-      ],
       msrp: "$890",
       wholesalePrice: "$620",
     },
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-      },
-    },
-  };
-
-  const cardVariants = {
-    hidden: { opacity: 0, y: 35 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.7,
-        ease: [0.16, 1, 0.3, 1],
-      },
-    },
-  };
-
   return (
     <section id="products" className="py-20 sm:py-28 bg-white text-slate-900 border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 pb-6 border-b border-slate-200">
+        {/* Section Heading */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12 pb-6 border-b border-slate-200">
           <div>
-            <div className="inline-flex items-center gap-2 text-xs font-mono font-bold text-brand-orange uppercase tracking-wider mb-2">
-              <span>[ 04 / PRODUCT LINEUP ]</span>
+            <div className="inline-block text-xs font-mono font-bold text-brand-orange uppercase tracking-wider mb-2">
+              [ 04 / PRODUCT LINEUP ]
             </div>
             <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-950">
               Standard-Setting Positioning Hardware.
@@ -110,98 +72,88 @@ export const ProductLineup: React.FC<ProductLineupProps> = ({ onSelectProduct })
           </div>
         </div>
 
-        {/* 3 Core Product Cards Grid */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-40px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-        >
-          {products.map((prod) => (
+        {/* Detailed Horizontal Catalog Stack matching Framer reference image */}
+        <div className="space-y-6">
+          {products.map((prod, index) => (
             <motion.div
               key={prod.id}
-              variants={cardVariants}
-              whileHover={{ y: -6, transition: { duration: 0.25 } }}
-              className="relative rounded-2xl bg-white border border-slate-200 p-6 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-slate-300 transition-all group"
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.1,
+                ease: [0.16, 1, 0.3, 1],
+              }}
+              whileHover={{ y: -2 }}
+              className="rounded-xl bg-white border border-slate-200 p-5 sm:p-7 flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-8 shadow-sm hover:shadow-md transition-all group"
             >
-              <div>
-                {/* Header Badges */}
-                <div className="flex items-center justify-between text-[11px] font-mono text-slate-600 mb-3">
+              {/* Left: Thumbnail Container */}
+              <div className="relative w-full lg:w-72 h-48 sm:h-52 bg-slate-50 rounded-lg border border-slate-100 flex items-center justify-center p-3 shrink-0 overflow-hidden">
+                <Image
+                  src={prod.image}
+                  alt={prod.title}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 300px"
+                  className="object-contain p-2 filter contrast-105 group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+
+              {/* Middle: Spec Data Sheet Middle */}
+              <div className="flex-1 w-full text-left">
+                {/* Meta badges row */}
+                <div className="flex flex-wrap items-center gap-3 text-[11px] font-mono text-slate-500 mb-2.5">
                   <span className="px-2.5 py-0.5 rounded bg-slate-100 text-slate-800 font-semibold border border-slate-200">
                     {prod.categoryBadge}
                   </span>
+                  <span>SKU: {prod.sku}</span>
+                  <span>•</span>
+                  <span>LOAD: {prod.load}</span>
+                  <span>•</span>
                   <div className="flex items-center gap-1.5">
                     <span className={`w-2 h-2 rounded-full ${prod.statusColor} animate-pulse`} />
-                    <span className="text-slate-700 font-medium">{prod.stockStatus}</span>
+                    <span className="font-semibold text-slate-700">{prod.stockStatus}</span>
                   </div>
                 </div>
 
-                {/* SKU & Load Telemetry */}
-                <div className="flex items-center justify-between text-[10px] font-mono text-slate-400 mb-4 pb-2 border-b border-slate-100">
-                  <span>SKU: {prod.sku}</span>
-                  <span>MAX LOAD: {prod.load}</span>
-                </div>
-
-                {/* Image Viewport */}
-                <div className="relative aspect-[4/3] w-full rounded-xl overflow-hidden bg-slate-50 border border-slate-100 mb-5 flex items-center justify-center p-3">
-                  <Image
-                    src={prod.image}
-                    alt={prod.title}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 380px"
-                    className="object-contain p-2 filter contrast-105 group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute top-2 left-2 text-slate-300 font-mono text-[10px]">+</div>
-                  <div className="absolute top-2 right-2 text-slate-300 font-mono text-[10px]">+</div>
-                </div>
-
-                {/* Product Title & Description */}
-                <h3 className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight leading-snug mb-2 group-hover:text-brand-orange transition-colors">
+                {/* Title */}
+                <h3 className="text-xl sm:text-2xl font-extrabold text-slate-950 tracking-tight leading-snug group-hover:text-brand-orange transition-colors">
                   {prod.title}
                 </h3>
-                <p className="text-xs text-slate-600 leading-relaxed font-normal mb-4">
+
+                {/* Description */}
+                <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed font-normal max-w-2xl">
                   {prod.description}
                 </p>
-
-                {/* Key Spec Bullets */}
-                <ul className="space-y-1.5 mb-6 text-xs text-slate-600">
-                  {prod.highlights.map((item) => (
-                    <li key={item} className="flex items-center gap-2">
-                      <Check className="w-3.5 h-3.5 text-brand-orange shrink-0" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
               </div>
 
-              {/* Price & Order Action Footer */}
-              <div className="pt-4 border-t border-slate-100 flex items-end justify-between">
-                <div>
-                  <div className="text-[11px] font-mono text-slate-400">
-                    MSRP: <span className="line-through">{prod.msrp}</span>
+              {/* Right: Pricing Box & Order Button */}
+              <div className="w-full lg:w-auto shrink-0 flex flex-col items-center justify-center">
+                <div className="w-full lg:w-52 rounded-lg bg-[#fffbeb] border border-[#fde68a] p-4 text-center">
+                  <div className="text-[11px] font-mono text-slate-400 line-through">
+                    MSRP: {prod.msrp}
                   </div>
-                  <div className="text-[10px] font-mono text-brand-orange uppercase font-semibold">
+                  <div className="text-[10px] font-mono text-amber-900 uppercase font-bold mt-0.5">
                     price starts from
                   </div>
-                  <div className="text-xl sm:text-2xl font-bold font-mono text-slate-950 tracking-tight">
+                  <div className="text-xl sm:text-2xl font-extrabold font-mono text-slate-950 tracking-tight mt-0.5">
                     from {prod.wholesalePrice}
                   </div>
-                </div>
 
-                <button
-                  onClick={() =>
-                    onSelectProduct(prod.title, prod.sku, prod.wholesalePrice)
-                  }
-                  className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-md text-xs font-mono font-bold tracking-wider text-white bg-brand-orange hover:bg-brand-orange-hover transition-all shadow-glowOrange group/btn"
-                >
-                  <span>Order Now</span>
-                  <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover/btn:translate-x-0.5" />
-                </button>
+                  {/* Order Button */}
+                  <button
+                    onClick={() =>
+                      onSelectProduct(prod.title, prod.sku, prod.wholesalePrice)
+                    }
+                    className="mt-3.5 w-full py-2.5 px-4 rounded bg-[#0f172a] hover:bg-[#1e293b] text-white font-mono text-xs font-bold tracking-wider transition-colors shadow-sm"
+                  >
+                    Order Now
+                  </button>
+                </div>
               </div>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

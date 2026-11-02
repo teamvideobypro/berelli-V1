@@ -64,28 +64,9 @@ export const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="relative bg-[#080808] text-white pt-16 pb-12 border-t border-[#1f1f1f] overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Top Header Row with Logo and Compliance Badge */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-12 mb-12 border-b border-neutral-800/80 gap-6">
-          <div className="flex items-center gap-4">
-            <BereliLogo className="h-8 w-auto text-white" />
-            <span className="hidden sm:inline-block px-2.5 py-1 rounded bg-[#141414] border border-neutral-800 text-[10px] font-mono text-neutral-400">
-              EST. SURGICAL PRECISION
-            </span>
-          </div>
-
-          <div className="flex items-center gap-4 text-xs font-mono text-neutral-400">
-            <div className="flex items-center gap-2">
-              <ShieldCheck className="w-4 h-4 text-brand-orange" />
-              <span>ISO 13485:2016 QUALITY SYSTEM</span>
-            </div>
-            <span>•</span>
-            <span className="text-white">FDA 510(k) REGISTERED</span>
-          </div>
-        </div>
-
-        {/* 5 Navigation Columns */}
+    <footer className="bg-[#080808] text-white pt-16 pb-12 border-t border-[#1a1a1a]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Top 5 Navigation Columns matching reference image */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mb-16">
           {footerColumns.map((col) => (
             <div key={col.title}>
@@ -108,14 +89,14 @@ export const Footer: React.FC = () => {
           ))}
         </div>
 
-        {/* Giant Watermark Graphic (BERELI) */}
-        <div className="w-full flex justify-center py-6 select-none pointer-events-none opacity-[0.06] overflow-hidden">
+        {/* Big BERRELLI Watermark Typography matching Framer screenshot */}
+        <div className="w-full flex justify-center py-10 select-none pointer-events-none">
           <svg
             width="870"
             height="174"
             viewBox="0 0 870 174"
             fill="none"
-            className="w-full max-w-4xl h-auto"
+            className="w-full max-w-4xl h-auto opacity-70"
             aria-hidden="true"
           >
             <path
@@ -149,7 +130,7 @@ export const Footer: React.FC = () => {
           </svg>
         </div>
 
-        {/* Bottom Bar */}
+        {/* Bottom copyright line */}
         <div className="pt-8 border-t border-neutral-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-neutral-400">
           <p className="text-center sm:text-left">
             © 2025 Bereli Medical Technologies Inc. All rights reserved.
@@ -157,16 +138,10 @@ export const Footer: React.FC = () => {
           </p>
 
           <div className="flex items-center gap-6">
-            <Link
-              href="#privacy"
-              className="hover:text-white transition-colors"
-            >
+            <Link href="#privacy" className="hover:text-white transition-colors">
               PRIVACY POLICY
             </Link>
-            <Link
-              href="#terms"
-              className="hover:text-white transition-colors"
-            >
+            <Link href="#terms" className="hover:text-white transition-colors">
               TERMS OF USE
             </Link>
             <button
